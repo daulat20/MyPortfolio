@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daulat Bhutal — Java Full Stack Portfolio</title>
+    <meta name="color-scheme" content="dark">
+
+    <!-- Load Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader" aria-hidden="true">
+        <div class="loader" role="img" aria-label="Loading"></div>
+    </div>
+
+    <!-- Header / Nav -->
+    <header>
+        <nav class="container" aria-label="Main Navigation">
+            <div class="brand">
+                <div class="logo">DB</div>
+                <div class="brand-text">
+                    <div class="name">Daulat <strong>Bhutal</strong></div>
+                    <div class="muted" style="font-size:0.75rem;color:var(--text-muted)">Java Full Stack</div>
+                </div>
+            </div>
+
+            <div style="display:flex;gap:1rem;align-items:center">
+                <div class="nav-links" id="navLinks" role="navigation" aria-label="Header Links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#resume">Resume</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="controls flex items-center gap-3">
+                    <a class="btn-primary resume-download text-sm" href="https://drive.google.com/file/d/1cHl2lMsUMZUHle8-09cntGsragpr84GX/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
+                    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:24px;height:24px"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Floating social icons -->
+    <div class="social-fixed" aria-hidden="false">
+        <a href="https://github.com/daulat20" target="_blank" aria-label="GitHub">GH</a>
+        <a href="https://www.linkedin.com/in/daulat-bhutal-a25173246" target="_blank" aria-label="LinkedIn">in</a>
+        <a onclick="openContactForm()" aria-label="Email Me">✉️</a>
+    </div>
+
+    <!-- Main -->
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="home" aria-labelledby="homeHeading">
+            <div class="container">
+                <div class="welcome">WELCOME TO MY WORLD</div>
+                <h1 id="homeHeading">Hi, I'm <span class="accent">Daulat Bhutal</span></h1>
+                <div class="typed-sub" aria-live="polite">
+                    <span id="typedTitle"></span>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="#projects" class="btn-primary" role="button">Explore My Work</a>
+                    <a href="#contact" class="btn-ghost" role="button">Contact</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="container">
+            <div class="glass" style="padding:2.5rem;">
+                <h2 class="section-title">About Me</h2>
+                <p style="color:var(--text-muted);line-height:1.7;text-align:center">
+                    I am a <strong>Java Full Stack Developer</strong> passionate about building efficient, maintainable applications and thoughtful user experiences. 
+                    My core strengths include <strong>Java, Spring Boot, MySQL</strong>, and modern front-end tooling like JavaScript and responsive web design. I thrive on solving complex problems and continuously learning new technologies to deliver high-quality software solutions.
+                </p>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="glass p-8">
+                    <h3>Frontend & Web</h3>
+                    <div class="skill-row">
+                        <p>HTML / CSS / Tailwind</p><div class="bar" data-progress="90"><i></i></div>
+                    </div>
+                    <div class="skill-row">
+                        <p>JavaScript (ES6+)</p><div class="bar" data-progress="80"><i></i></div>
+                    </div>
+                    <div class="skill-row">
+                        <p>Responsive Design / Bootstrap</p><div class="bar" data-progress="85"><i></i></div>
+                    </div>
+                </div>
+
+                <div class="glass p-8">
+                    <h3>Backend & Database</h3>
+                    <div class="skill-row">
+                        <p>Core Java / OOP</p><div class="bar" data-progress="92"><i></i></div>
+                    </div>
+                    <div class="skill-row">
+                        <p>Spring Framework / Spring Boot</p><div class="bar" data-progress="88"><i></i></div>
+                    </div>
+                    <div class="skill-row">
+                        <p>MySQL / PostgreSQL / SQL</p><div class="bar" data-progress="88"><i></i></div>
+                    </div>
+                    <div class="skill-row">
+                        <p>Advanced Java (Servlets/JSP)</p><div class="bar" data-progress="80"><i></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESUME TIMELINE -->
+        <section id="resume" class="container">
+            <h2 class="section-title">Education & Experience</h2>
+
+            <div class="glass timeline" aria-hidden="false">
+                <div class="timeline-item">
+                    <h4> Java Full Stack Course — 2025</h4>
+                    <p>Comprehensive training in Spring Boot, REST APIs, database management, and modern React/web development.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>M.Sc Computer Science — 2024</h4>
+                    <p>Shivaji University, Kolhapur. Focused on advanced algorithms and software methodologies.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>B.Sc Computer Science — 2022</h4>
+                    <p>Shivaji University, Kolhapur. Foundation in computer science principles and programming.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS WITH MODALS -->
+        <section id="projects" class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <br>
+            <div class="projects-grid" role="list">
+                <article class="project-card glass" role="listitem" tabindex="0" data-project='{"title":"Bank Management System","desc":"A secure, Java Swing and MySQL-based desktop application for complete account management, transaction processing, and generating detailed financial reports. Showcases strong OOP design and database integration.","img":"https://placehold.co/800x420/223/fff?text=Bank+Management+System"}'>
+                    <img src="bank.png" alt="Bank App screenshot">
+                    <div class="pc-body">
+                        <h5>Bank Management System</h5>
+                        <p>Java Swing + MySQL desktop banking application</p>
+                    </div>
+                </article>
+
+                <article class="project-card glass" role="listitem" tabindex="0" data-project='{"title":"Personal Portfolio Website","desc":"The responsive, modern portfolio website you are viewing now, built with clean HTML/CSS/JS (now powered by Tailwind) showcasing design skills and web development fundamentals.","img":"https://placehold.co/800x420/1e3a8a/bfdbfe?text=Portfolio+Website"}'>
+                    <img src="portfolio.jpg" alt="Portfolio screenshot">
+                    <div class="pc-body">
+                        <h5>Portfolio Website</h5>
+                        <p>Responsive single-page portfolio (HTML/CSS/JS)</p>
+                    </div>
+                </article>
+
+                <article class="project-card glass" role="listitem" tabindex="0" data-project='{"title":"Java Programming Repository","desc":"A GitHub repository containing 200+ Java logic, data structure, and pattern programs. Used for technical practice and demonstrating core Java fluency.","img":"https://placehold.co/800x420/4c0519/fecaca?text=Java+Algorithms"}'>
+                    <img src="java.png" alt="Pattern programs screenshot">
+                    <div class="pc-body">
+                        <h5>200+ Java Programs</h5>
+                        <p>Algorithmic & core Java practice repository</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Modal backdrop -->
+        <div id="modalBackdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+            <div class="modal" role="document">
+                <div class="modal-head">
+                    <div>
+                        <h3 id="modalTitle">Project Title</h3>
+                        <p id="modalDesc" style="color:var(--text-muted)">Project description</p>
+                    </div>
+                    <div>
+                        <button id="modalClose" class="btn-ghost" aria-label="Close project">Close</button>
+                    </div>
+                </div>
+                <img id="modalImg" src="" alt="project image">
+            </div>
+        </div>
+
+        <!-- CONTACT -->
+        <section id="contact" class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="glass" style="padding:2.5rem;display:flex;flex-direction:column;gap:12px;align-items:center">
+                <p style="color:var(--text-muted); text-align:center;">Let's collaborate on your next project or discuss opportunities. Reach out via email or connect on social media.</p>
+                <div style="display:flex;gap:1rem">
+                    <a class="btn-ghost" onclick="openContactForm()">Email</a>
+                    <a class="btn-ghost"  href="https://github.com/daulat20" target="_blank">Github</a>
+                </div>
+            </div>
+
+            <div id="emailContactBox" style="display:none;">
+                <h3 style="margin-bottom: 1rem; font-size:1.5rem; font-weight:600; text-align:center;">Send Me a Message</h3>
+                <form id="notifyForm" onsubmit="sendNotification(event)">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="4" placeholder="Write your message..." required></textarea>
+                    <button class="btn-primary" type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container" style="text-align:center; padding:1.5rem 0; border-top:1px solid #1e293b; font-size:0.875rem">
+            &copy; 2025 Daulat Bhutal • Built with ❤️ • <span style="color:var(--text-muted)">Made for learning & growth</span>
+        </div>
+    </footer>
+    
+    <div id="notifyPopup"></div>
+
+  <script src="script.js"></script>
+        
+</body>
+</html>
